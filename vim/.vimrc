@@ -16,6 +16,7 @@ Plugin 'qualiabyte/vim-colorstepper'
 Plugin 'scrooloose/syntastic.git'
 Plugin 'tpope/vim-fireplace'
 Plugin 'nvie/vim-flake8'
+Plugin 'ngmy/vim-rubocop'
 
 let g:flake8_cmd="/usr/local/bin/pep8"
 

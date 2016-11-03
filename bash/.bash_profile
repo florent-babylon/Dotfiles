@@ -16,7 +16,7 @@ then
 fi
 
 ## Personal tweaks
-export PATH=/usr/local/sbin:/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:/usr/local/bin:~/bin:$PATH
 
 # Aliases
 for alias in ~/.bash/aliases/*
@@ -38,6 +38,8 @@ bind '"\eOB": history-search-forward'
 # More history!
 HISTSIZE=10000000
 HISTFILESIZE=10000000
+# Ignore dups and lines starting with a space
+HISTCONTROL=ignoreboth
 
 
 GREEN="\033[0;32m"
@@ -63,6 +65,5 @@ BOLDLAMBDA="\[$BOLD\]λ\[$NOCOLOUR\]"
 # Prettier prompt including Git status
 export PS1="[\t]\w\[\$(gitcolour)\]\$(__git_ps1)\[$NOCOLOUR\] $BOLDLAMBDA "
 
-# RVM
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# rbenv
+export PATH=~/.rbenv/shims:$PATH
